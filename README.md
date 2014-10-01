@@ -1,4 +1,3 @@
-webdev
-======
+# Web Development @ VT Club
 
-Web Development @ VT Club Site
+This is the repo for Web Development @ VT club website.
