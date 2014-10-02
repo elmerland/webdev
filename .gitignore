@@ -1,4 +1,10 @@
 # JetBrains IDE's
 .idea
-
+# Directory where npm modules are installed
+node_modules
+# Directory where the compiled sass code will go
+css
+# File where error logs are written to
+npm-debug.log
+# Mac metadata file
 .DS_Store
