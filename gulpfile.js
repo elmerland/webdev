@@ -4,7 +4,7 @@ var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('sass', function() {
   return gulp.src('./sass/**/*.scss')
-    .pipe(sass())
+    .pipe(sass({errLogToConsole: true}))
     .pipe(autoprefixer())
     .pipe(gulp.dest('./css'));
 });
