@@ -1,9 +1,70 @@
-html {
-  font-size: 100%;
+@import "variables";
 
-  .container {
-    max-width: 60em;
-    margin: 0 auto;
+.center-column {
+  max-width: 50em;
+  margin: 0 auto;
+}
+
+// Styling for page header
+.page-header {
+  font-family: $sans_serif;
+  background-color: $header_bg;
+  color: $title_color;
+  h1 {
     text-align: center;
+    font-size: 3.5em;
+    padding-top: .5em;
+    margin: 0;
+  }
+  h2 {
+    text-align: center;
+    font-size: 2.0em;
+    font-weight: 100;
+    padding-top: .5em;
+    margin: 0;
+  }
+}
+
+.page-nav {
+  padding: 1em 0 1em 0;
+
+  ul {
+    display: table;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    li {
+      font-size: 1.5em;
+      text-align: center;
+      display: table-cell;
+      text-decoration: none;
+
+      // Center child
+      width: 20%;
+      &:first-child {
+        // Left Child
+        text-align: right;
+        width: 40%;
+      }
+      &:last-child {
+        // Right Child
+        text-align: left;
+        width: 40%;
+      }
+
+      a, a:link, a:visited, a:hover, a:active{
+        padding: .2em 1em;
+        text-decoration: none;
+        color: white;
+        display: block;
+        width: 100%;
+        border: .1em solid $header_bg;
+        background-color: lighten($header_bg, 10%);
+
+        &:hover {
+
+        }
+      }
+    }
   }
 }
