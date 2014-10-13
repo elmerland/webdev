@@ -23,3 +23,13 @@ This is the repo for Web Development @ VT club website.
 - Compile Sass
     - Run: `gulp`
     - This will listen to changes inside of the `sass` directory and compile any new files.
+
+## Get up and running
+- Download repo into a local directory.
+    - `$ git clone https://github.com/elmerland/webdev.git`
+- Inside of the repo create a new directory under the `profiles` directory. This new directory should have your name as the folder name (i.e. `profiles/my_name`).
+- Now copy the contents of `profile/base-profile` into the directory with your name.
+- Rename the `base.html` file with your name (i.e. `my_name.html`).
+- Open terminal and cd into repo directory.
+- Run `$ gulp watch`. This will start watching the sass directory for changes to sass files and  automatically compile then into css files.
+- 
