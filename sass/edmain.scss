@@ -24,6 +24,36 @@
     margin: 0;
   }
 }
+//Styling for the page-container
+.page-container{
+  background: #f7f7f7;
+}
+
+//Image figure
+.image-header {
+  padding-top: 25px;
+  width: 120px;
+  margin: 0 auto;
+}
+
+//About me section
+.profile-about-me {
+  text-align: center;
+}
+
+//Bio/projects section
+section.profile-bio {
+  border-radius: 4px;
+  border: 1px solid rgba(255, 3, 3, 0.45);
+  margin: 20px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+section.profile-bio:hover {
+  background: lightblue;
+}
+
+
 
 .page-nav {
   padding: 1em 0 1em 0;
