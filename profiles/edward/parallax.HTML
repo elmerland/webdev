@@ -2,8 +2,26 @@
 <html>
 <head>
 	<title>Parallax Experiment</title>
+  <link rel="stylesheet" type="text/css" href="../../css/edwardparallax.css"/>
 </head>
 <body>
 
+	<div id="container" class="container">
+    	<ul id="scene">
+  			<li class="layer" data-depth="0.00"><img src="images/layer1.png"></li>
+  			<li class="layer" data-depth="0.20"><img src="images/money_bag.png"></li>
+  			<li class="layer" data-depth="0.40"><img src="images/brick.png"></li>
+  			<li class="layer" data-depth="0.60"><img src="images/bottle.png"></li>
+		</ul>
+  	</div>
+
+  <!-- Scripts -->
+  	<script src="../../js/parallax.js"></script>
+  	
+    <script>
+  		// Nothing new here...it's all in the CSS!
+  		var scene = document.getElementById('scene');
+  		var parallax = new Parallax(scene);
+  	</script>
 </body>
 </html>
