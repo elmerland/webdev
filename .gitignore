@@ -4,6 +4,8 @@
 node_modules
 # Directory where the compiled sass code will go
 css
+.sass-cache
+**/.css.map
 # File where error logs are written to
 npm-debug.log
 # Mac metadata file
