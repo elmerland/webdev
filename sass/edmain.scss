@@ -1,5 +1,10 @@
 @import "variables";
 
+.body{
+  
+  background: #f7f7f7;
+}
+
 .center-column {
   max-width: 50em;
   margin: 0 auto;
@@ -67,6 +72,8 @@ section.profile-bio:hover {
 
 .javascript-fun{
   text-align: center;
+  margin: 20px;
+  margin: 0 auto;
 }
 
 
