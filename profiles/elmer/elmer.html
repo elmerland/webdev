@@ -2,22 +2,35 @@
 <html>
   <head lang="en">
     <meta charset="UTF-8">
-    <title>Web Dev</title>
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400|Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+    <!--Meta tag for mobile view-->
+    <meta name="viewport" content="initial-scale=1">
+
+    <!--Include google fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Courgette|Handlee|Playball|Lato:100,300,400|Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+
+    <!--Include stylesheet files-->
     <link type="text/css" rel="stylesheet" href="../../css/normalize.css"/>
     <link type="text/css" rel="stylesheet" href="../../css/base.css">
     <link type="text/css" rel="stylesheet" href="../../css/elmer/styles.css">
+
+    <!--Include JavaScript files-->
     <script src="../../js/jquery-2.1.1.min.js"></script>
+    <script src="../../js/d3.min.js"></script>
     <script src="../../js/jquery.fittext.js"></script>
+    <script src="../../js/jquery.lettering.js"></script>
     <script src="../../js/elmer/script.js"></script>
+
+    <title>Web Dev</title>
   </head>
 
   <body>
+    <header>
+      <div class="title-box">
+        <h1>ELMER LANDAVERDE</h1>
+      </div>
+      <h2>Create Design Inspire</h2>
+    </header>
     <div class="container">
-      <header>
-        <h1>Elmer Landaverde</h1>
-        <h2>Create. Design. Inspire.</h2>
-      </header>
       <nav>
         <ul>
           <li><a href="#">About</a></li>
@@ -26,19 +39,109 @@
         </ul>
       </nav>
       <article>
-        <section>
-          <h3>About Me</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisl lectus, pretium nec eros non, tristique volutpat tortor. Phasellus pharetra sem eros, vitae finibus tellus imperdiet non. Praesent vel tempus magna. Vivamus ullamcorper eu elit sed condimentum. Mauris semper egestas felis, id ornare mi varius nec. Morbi elementum a urna nec volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi accumsan neque leo, non consectetur massa mollis eget. Sed sit amet euismod sapien. Sed erat mauris, bibendum in placerat non, feugiat eget enim. Mauris quam massa, dictum quis mollis sodales, scelerisque quis enim. Phasellus accumsan, metus ac vestibulum sagittis, erat dolor faucibus nisi, et eleifend ligula eros a tellus. Integer feugiat augue in arcu cursus, vel viverra leo blandit. Duis felis elit, dictum vel ante ac, rhoncus vulputate dolor. Praesent vel diam massa. Ut ac tincidunt ex.</p>
+        <section class="quote">
+          <blockquote>
+            <p>
+              The sum total of the habits of a man is his nature. It has come about as a result of his giving himself over to the bent of his mind.
+            </p>
+            <cite>The Bhagavad Gita</cite>
+          </blockquote>
         </section>
         <section>
-          <h3>Biography</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisl lectus, pretium nec eros non, tristique volutpat tortor. Phasellus pharetra sem eros, vitae finibus tellus imperdiet non. Praesent vel tempus magna. Vivamus ullamcorper eu elit sed condimentum. Mauris semper egestas felis, id ornare mi varius nec. Morbi elementum a urna nec volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi accumsan neque leo, non consectetur massa mollis eget. Sed sit amet euismod sapien. Sed erat mauris, bibendum in placerat non, feugiat eget enim. Mauris quam massa, dictum quis mollis sodales, scelerisque quis enim. Phasellus accumsan, metus ac vestibulum sagittis, erat dolor faucibus nisi, et eleifend ligula eros a tellus. Integer feugiat augue in arcu cursus, vel viverra leo blandit. Duis felis elit, dictum vel ante ac, rhoncus vulputate dolor. Praesent vel diam massa. Ut ac tincidunt ex.</p>
+          <h3>About Me</h3>
+          <p>
+            Originally born in El Salvador, I am a senior in Computer Science
+            at Virginia Tech. My passion for learning drives me to constantly
+            innovate and embrace change. The best way to learn, however, is by
+            doing. The application of theoretical knowledge to the wonderfully
+            complex and imperfect world we live in is what keeps me motivated.
+            I strive to strike a balance between pragmatism, theory and
+            research. Whenever possible I also try to incorporate other
+            disciplines and areas of study into my work. It is by this mixture
+            of different areas of expertise and working with other highly
+            motivated individuals that I believe the best type of work can be
+            achieved. I love working in groups, in my experience a group of
+            well balanced individuals can out perform any lone range (however
+            brilliant he/she might be) any day of the week. After all, we human
+            beings are social creatures.
+          </p>
+        </section>
+        <section>
+          <h3>Skills</h3>
+          <p>These are the programming languages that I have experience in:</p>
+          <ul>
+            <li>Java <span class="proficiency-level">Proficient</span></li>
+            <li>C <span class="proficiency-level">Proficient</span></li>
+            <li>JavaScript <span class="proficiency-level">Proficient</span></li>
+            <li>HTML <span class="proficiency-level">Proficient</span></li>
+            <li>CSS <span class="proficiency-level">Proficient</span></li>
+            <li>SQL <span class="proficiency-level">Knowledge of</span></li>
+            <li>PHP <span class="proficiency-level">Knowledge of</span></li>
+            <li>Ruby <span class="proficiency-level">Knowledge of</span></li>
+            <li>Python <span class="proficiency-level">Knowledge of</span></li>
+            <li>Bash script <span class ="proficiency-level">Knowledge of</span></li>
+          </ul>
+          <p>These are some platforms/technologies I have experience with:</p>
+          <ul>
+            <li>Git <a href="https://github.com/elmerland">(github: elmerland)</a></li>
+            <li>MySQL</li>
+            <li>Sqlite</li>
+            <li>PostgresQL</li>
+            <li>Bash/Zsh/CMD</li>
+            <li>Windows/Mac/Linux</li>
+          </ul>
+          <p>Additionally, I have experience with design work and photography:</p>
+          <ul>
+            <li>Photoshop</li>
+            <li>Illustrator</li>
+            <li>Lightroom</li>
+          </ul>
         </section>
         <section>
           <h3>Interests & Work</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisl lectus, pretium nec eros non, tristique volutpat tortor. Phasellus pharetra sem eros, vitae finibus tellus imperdiet non. Praesent vel tempus magna. Vivamus ullamcorper eu elit sed condimentum. Mauris semper egestas felis, id ornare mi varius nec. Morbi elementum a urna nec volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi accumsan neque leo, non consectetur massa mollis eget. Sed sit amet euismod sapien. Sed erat mauris, bibendum in placerat non, feugiat eget enim. Mauris quam massa, dictum quis mollis sodales, scelerisque quis enim. Phasellus accumsan, metus ac vestibulum sagittis, erat dolor faucibus nisi, et eleifend ligula eros a tellus. Integer feugiat augue in arcu cursus, vel viverra leo blandit. Duis felis elit, dictum vel ante ac, rhoncus vulputate dolor. Praesent vel diam massa. Ut ac tincidunt ex.</p>
+          <p>
+            These are some projects I have worked on in school, during my undergraduate research and my internship.
+          </p>
+          <dl>
+            <dt>Web Server</dt>
+            <dd>Developed a simple HTTP server that followed the HTTP/1.0 and
+              1.1 standard. I implemented this in C and gained expereince in
+              dealing with network connections, sockets, pipes, and thread
+              pools.</dd>
+            <dt>Memory Allocator</dt>
+            <dd>This memory allocator supported the same functionality as
+              <code>malloc</code>, <code>free</code>, and <code>realloc</code>.
+              On top of having the same functionality as these functions it
+              also had comparable performance (92%). This memory allocator was
+              also design to work on 32 and 64-bit architectures.</dd>
+            <dt>B-Tree visualization infrastructure</dt>
+            <dd>While working with
+              <a href="http://algoviz.org/OpenDSA/">OpenDSA</a>, I extended a
+              JavaScript visualization library to support the creation of
+              B-Tree. This involved the modification and adaptation of
+              existing data structures to allow for the needs of a B-Tree.
+              Currently, I'm in the process of implementing the B-Tree
+              algorithm in JavaScript that will drive the visualization.</dd>
+          </dl>
         </section>
       </article>
     </div>
+    <footer>
+      <section class="container">
+        <h2>Web Development Club @ VT</h2>
+        <dl>
+          <dt>Created by:</dt>
+          <dd>Elmer Landaverde (elmer@vt.edu)</dd>
+          <dt>Position:</dt>
+          <dd>Advisor</dd>
+        </dl>
+        <p>
+          This is a sample page that demonstrates the use of techniques for a 
+          responsive design. For the full source code please visit the web dev
+          <a href="https://github.com/elmerland/webdev">github repo</a>.
+        </p>
+      </section>
+      <h1>ELMER LANDAVERDE</h1>
+    </footer>
   </body>
 </html>

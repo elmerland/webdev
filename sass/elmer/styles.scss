@@ -3,34 +3,54 @@
 @import "layout";
 @import "text";
 
+// Set bounds for the page container
 .container {
   @include container();
 }
 
-section h3, p {
+// Set responsive width for center column
+section > h3, section > p, section > blockquote, section > dl, section > ul {
   @include center_column();
 }
 
+// Styling for page header
 header {
+  text-align: center;
+  .title-box {
+    border-bottom: 1px solid lighten($dark-gray, 50%);
+  }
   h1 {
     font-family: "Open Sans";
-    font-weight: 400;
+    font-weight: 700;
     font-size: 5em;
-    margin-top: -.3em;
+    margin-top: -.35em;
+    margin-bottom: -.24em;
   }
   h2 {
     font-family: lato;
     font-weight: 300;
     color: lighten(black, 50%);
-    text-align: center;
-    margin-top: -.55em;
+    margin-top: -.2em;
     margin-bottom: .5em;
+    span[class^="word"] {
+
+    }
+    .word1::after {
+      content: " · ";
+    }
+    .word3::Before {
+      content: " · ";
+    }
   }
 }
 
+// Styling for navigation links
 nav {
   text-align: center;
   font-size: 1.5em;
+  @media (max-width: 25em) {
+    font-size: 1.2em;
+  }
   margin-bottom: 1em;
 
   li {
@@ -51,5 +71,51 @@ nav {
 
   a:hover {
     color: $blue;
+  }
+}
+
+// Styling for page article
+article {
+  margin-bottom: 2em;
+  .proficiency-level {
+    color: lighten(black, 50%);
+    font-size: .8em;
+  }
+  ul {
+    margin-bottom: 1em;
+  }
+}
+
+// Styling for page footer
+footer {
+  background-color: $dark-gray;
+  color: darken(white, 30%);
+  position: relative;
+  overflow-y: hidden;
+  font-size: .8em;
+
+  section {
+    margin-top: .5em;
+    dt {
+      margin-top: 0;
+    }
+  }
+
+  a, a:link, a:visited, a:hover, a:active {
+    color: darken(white, 30%);
+    text-decoration: underline;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  h1 {
+    position: relative;
+    border-top: 0;
+    display: block;
+    color: darken(white, 70%);
+    text-align: center;
+    height: 1em;
   }
 }
