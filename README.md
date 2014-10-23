@@ -32,4 +32,3 @@ This is the repo for Web Development @ VT club website.
 - Rename the `base.html` file with your name (i.e. `my_name.html`).
 - Open terminal and cd into repo directory.
 - Run `$ gulp watch`. This will start watching the sass directory for changes to sass files and  automatically compile then into css files.
-- 
