@@ -10,25 +10,37 @@ This is the repo for Web Development @ VT club website.
     - How to check you installed them correctly?
         - Run: `$ which npm`
         - Run: `$ which node`
-- Install git and clone repo
+- Install gulp globally
+    - Run: `$ npm install -g gulp`
+    - Check: `$ which gulp`
+- Install git
     - Follow [installation instructions](http://git-scm.com/book/en/Getting-Started-Installing-Git)
         - For mac you should use homebrew to install git
         - `brew install git`
-    - Clone git repo to your computer
-      - `git clone https://github.com/elmerland/webdev.git`
+
+## Get up and running
+- Download repo into a local directory.
+    - `$ git clone https://github.com/elmerland/webdev.git`
 - Install dependencies
     - `cd` into git repo directory
     - `$ npm install`
     - This will install gulpjs and some other plugins.
 - Compile Sass
-    - Run: `gulp`
-    - This will listen to changes inside of the `sass` directory and compile any new files.
+    - Open the terminal and navigate to the git repo directory
+    - Run: `$ gulp`
+    - This will listen to changes inside of the `sass` directory and compile them into normal 'css' files that the browser can understand.
+- Inside of the repo create a new directory under the `profiles` directory. This new directory should have your name as the folder name (i.e. `profiles/my_name`). Inside this directory you can create all of your HTML files.
+- Do the same for the `js`, and `sass` directories
 
-## Get up and running
-- Download repo into a local directory.
-    - `$ git clone https://github.com/elmerland/webdev.git`
-- Inside of the repo create a new directory under the `profiles` directory. This new directory should have your name as the folder name (i.e. `profiles/my_name`).
-- Now copy the contents of `profile/base-profile` into the directory with your name.
-- Rename the `base.html` file with your name (i.e. `my_name.html`).
-- Open terminal and cd into repo directory.
-- Run `$ gulp watch`. This will start watching the sass directory for changes to sass files and  automatically compile then into css files.
+## Challenges
+- JavaScript challenges:
+    - Add a jQuery widget, e.g. accordion, tabs, draggable items
+    - Add animations, e.g. scroll animation, fade-in/out, mouse-over effects
+- CSS challenges:
+    - Make responsive. Site works in mobile devices, e.g. phones, tables, desktop, extended desktop
+    - Complex layout/grid, e.g. multiple columns/row
+    - Homegrown bootstrap. Create basic styles for all HTML text tags e.g. paragraphs, titles, lists, 
+- Advanced:
+    - Advance layouts e.g. pinterest-style cards
+    - Dynamic content e.g. AJAX calls, graphs
+    - One page app e.g. Gmail style webpage, citymapper style webpage
