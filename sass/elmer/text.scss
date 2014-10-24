@@ -1,5 +1,5 @@
 // Set default site-wide font size
-body {
+@mixin text_size() {
   font-size: 100%;
 
   @media (min-width: 37.5em) {

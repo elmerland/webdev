@@ -3,6 +3,10 @@
 @import "layout";
 @import "text";
 
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 // Set bounds for the page container
 .container {
   @include container();
@@ -11,6 +15,11 @@
 // Set responsive width for center column
 section > h3, section > p, section > blockquote, section > dl, section > ul {
   @include center_column();
+}
+
+// Set responsive text size for page
+body {
+  @include text_size();
 }
 
 // Styling for page header
@@ -103,12 +112,16 @@ footer {
     display: block;
     text-align: center;
     height: 1em;
-
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-color: black;
-    color: transparent;
-    text-shadow: -1px 2px 3px rgba(77, 77, 77, 0.5);
-    background-clip: text;
+    color: lighten(black, 30%);
   }
 }
+
+footer {
+  background-color: $dark-gray;
+  color: darken(white, 30%);
+  position: relative;
+  overflow-y: hidden;
+  font-size: .8em;
+
+}
+
