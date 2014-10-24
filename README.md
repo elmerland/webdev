@@ -14,6 +14,8 @@ This is a list of all the dependencies and tools used by this project
 - [Node JS](http://nodejs.org/): A JavaScript engined that is required by npm
 - [Sass](http://sass-lang.com/): A compiler for CSS (installed through npm automatically)
 
+You should also be aware of the browser version you are using. This is not really a requirement, it is more of a website compatibility issue. But you should make sure to have the latest version of multiple browsers.
+
 ## For beginners
 
 The following instructions assume some familiarity using a terminal. Mainly, navigating files inside of the terminal, launching programs, and inspecting directories. If you are not familiar with this please take a few minutes to get familiar with it. These are some tutorials that you can go through:
