@@ -2,6 +2,21 @@
 
 This is the repo for Web Development @ VT club website.
 
+## For beginners
+
+The following instructions assume some familiarity using a terminal. Mainly, navigating files inside of the terminal, launching programs, and inspecting directories. If you are not familiar with this please take a few minutes to get familiar with it. These are some tutorials that you can go through:
+- Terminal for linux
+    - http://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/
+    - https://help.ubuntu.com/community/UsingTheTerminal
+    - http://cli.learncodethehardway.org/book/
+- Terminal for mac
+    - http://computers.tutsplus.com/tutorials/40-terminal-tips-and-tricks-you-never-thought-you-needed--mac-51192
+    - http://mac.appstorm.net/how-to/utilities-how-to/how-to-use-terminal-the-basics/
+- Terminal for windows
+    - http://www.cs.princeton.edu/courses/archive/spr05/cos126/cmd-prompt.html
+    - http://dosprompt.info/
+    - http://www.computerhope.com/issues/chusedos.htm
+
 ## Installation instructions
 
 - Install node.js and npm
