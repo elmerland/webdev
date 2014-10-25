@@ -1,25 +1,16 @@
 @import "../libs/bourbon/bourbon";
 @import "../libs/base/base";
+@import "mixins";
+@import "colors";
 @import "layout";
 @import "text";
 
-$vt-orange: #FF6600;
-$vt-maroon: #660000;
-$dark-white: darken(white, 5%);
-
-*, *:before, *:after {
-  box-sizing: border-box;
-}
+$footer-breakpoint: 35em;
 
 // Set bounds for the page container
 .container {
   @include container();
 }
-
-// Set responsive width for center column
-//h3, p, dl, ul {
-//  @include center_column();
-//}
 
 // Set responsive text size for page
 body {
@@ -27,123 +18,41 @@ body {
   background-color: $dark-white;
 }
 
-// Styling for page header
-.page-header-wrapper {
-  border-bottom: 1px solid grey;
-  @include linear-gradient(to bottom, white 0%, white 65%, $dark-white 100%);
+// Import header styling
+@import "header";
+
+// Set footer height
+@media (min-width: $footer-breakpoint) {
+  @include footer_height(10em);
+
+  .page-content-wrapper {
+    position: relative;
+    z-index: 100;
+  }
+
+  .page-footer-wrapper {
+    z-index: 10;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    .page-footer {
+      height: 100%;
+    }
+  }
 }
 
-.page-header {
-  display: flex;
-  align-items: stretch;
-  .page-header-title {
-    padding: .5em .8em .5em .5em;
-    h1 {
-      flex-shrink: 0;
-      font-family: "Open Sans";
-      font-weight: 400;
-      font-size: 1.2em;
-      line-height: 1.5em;
-    }
-  }
-  .page-nav {
-    flex-grow: 1;
-    flex-shrink: 1;
-    font-family: lato;
-    font-weight: 400;
-    font-size: 1em;
-    border-left: 1px solid grey;
-    padding: .5em 0 .5em .5em;
-    ul {
-      display: flex;
-      align-items: stretch;
-      height: 100%;
-      li {
-        flex-grow: 0;
-        flex-shrink: 0;
-        padding: 0 1.5em;
-        a, a:link, a:visited, a:hover, a:active {
-          font-size: 1.2em;
-          line-height: 1.5em;
-          color: gray;
-        }
-        a:hover {
-          color: $dark-gray;
-        }
-      }
-    }
-  }
+// Style page content
+.page-content-wrapper {
+  background-color: $dark-white;
 }
 
 .page-content {
-  .card {
-    display: flex;
-    align-items: stretch;
-    background-color: white;
-    margin: 1em 0;
-    border-radius: .1em;
-    border: 1px solid gray;
-    box-shadow: 0 0 .5em 0 rgba(0, 0, 0, 0.1);
-    .card-decorator {
-      flex-shrink: 0;
-      flex-grow: 0;
-      padding: .5em;
-      $light-orange: lighten($vt-orange, 10%);
-      @include linear-gradient(to right, $vt-orange, $light-orange);
-      color: rgba(0, 0, 0, 0.5);
-      text-align: center;
-      font-size: 1.5em;
-      width: 2.0em;
-    }
-    .card-content {
-      flex-grow: 1;
-      padding: .5em 1em .5em 1em;
-      .card-header {
-        border-bottom: 1px dotted gray;
-        h2 {
-          font-family: lato;
-          font-weight: 400;
-          font-size: 1.7em;
-        }
-      }
-    }
-  }
+  padding-bottom: 1em;
 }
 
-.event-card {
-  .event-details-list-item {
-    margin-left: 1em;
-  }
-  .event-title {
-    .title-icon {
-      padding: 0 .5em 0 0;
-    }
-  }
-  .event-detail-tag {
-    color: gray;
-    .tag {
-      font-style: normal;
-    }
-    .date-details::before {
-      content: "Date:";
-    }
-    .location-details::before {
-      content: "Location:";
-    }
-    .about-details::before {
-      content: "About:";
-    }
-  }
-}
+// Import card styling
+@import "cards";
 
-.page-footer-wrapper {
-  background-color: $dark-gray;
-  color: lighten(gray, 10%);
-}
-
-.page-footer {
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  padding: 1em 0;
-}
+// Import footer styling
+@import "footer";

@@ -3,10 +3,6 @@
 @import "layout";
 @import "text";
 
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
 // Set bounds for the page container
 .container {
   @include container();

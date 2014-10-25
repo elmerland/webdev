@@ -1,0 +1,47 @@
+// Styling for page header
+.page-header-wrapper {
+  border-bottom: 1px solid grey;
+  background-color: white;
+}
+
+.page-header {
+  display: flex;
+  align-items: stretch;
+  .page-header-title {
+    padding: .5em .8em .5em .5em;
+    h1 {
+      flex-shrink: 0;
+      font-family: "Open Sans";
+      font-weight: 400;
+      font-size: 1.2em;
+      line-height: 1.5em;
+    }
+  }
+  .page-nav {
+    flex-grow: 1;
+    flex-shrink: 1;
+    font-family: lato;
+    font-weight: 400;
+    font-size: 1em;
+    border-left: 1px solid grey;
+    padding: .5em 0 .5em .5em;
+    ul {
+      display: flex;
+      align-items: stretch;
+      height: 100%;
+      li {
+        flex-grow: 0;
+        flex-shrink: 0;
+        padding: 0 1.5em;
+        a, a:link, a:visited, a:hover, a:active {
+          font-size: 1.2em;
+          line-height: 1.5em;
+          color: gray;
+        }
+        a:hover {
+          color: $dark-gray;
+        }
+      }
+    }
+  }
+}

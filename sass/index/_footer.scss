@@ -1,0 +1,47 @@
+.page-footer-wrapper {
+  background-color: lighten($dark-gray, 10%);
+  color: lighten(gray, 20%);
+}
+
+.page-footer {
+  padding: 1em 0;
+  p {
+    margin: 0;
+  }
+  .footer-section {
+    font-size: .8em;
+    text-align: center;
+    .footer-section-tag {
+      font-size: 3em;
+
+    }
+    .footer-section-content {
+
+    }
+    a, a:link, a:visited, a:hover, a:active {
+      color: inherit;
+      text-decoration: underline;
+    }
+    a:hover {
+      color: white;
+    }
+  }
+  @media (min-width: $footer-breakpoint) {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .footer-section {
+      display: flex;
+      align-items: center;
+      width: 40%;
+      text-align: left;
+      .footer-section-tag {
+        flex-grow: 0;
+        margin-right: .8em;
+      }
+      .footer-section-content {
+        flex-grow: 1;
+      }
+    }
+  }
+}
