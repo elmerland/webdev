@@ -5,6 +5,7 @@
 
 $vt-orange: #FF6600;
 $vt-maroon: #660000;
+$dark-white: darken(white, 5%);
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -23,13 +24,13 @@ $vt-maroon: #660000;
 // Set responsive text size for page
 body {
   @include text_size();
-  background-color: darken(white, 5%);
+  background-color: $dark-white;
 }
 
 // Styling for page header
 .page-header-wrapper {
   border-bottom: 1px solid grey;
-  background-color: white;
+  @include linear-gradient(to bottom, white 0%, white 65%, $dark-white 100%);
 }
 
 .page-header {
@@ -76,27 +77,47 @@ body {
 
 .page-content {
   .card {
+    display: flex;
+    align-items: stretch;
     background-color: white;
-    padding: .5em .5em .5em 1em;
     margin: 1em 0;
     border-radius: .1em;
     border: 1px solid gray;
-    border-top: .5em solid $vt-orange;
-    .card-header {
-      border-bottom: 1px dotted gray;
-      h2 {
-        font-family: lato;
+    box-shadow: 0 0 .5em 0 rgba(0, 0, 0, 0.1);
+    .card-decorator {
+      flex-shrink: 0;
+      flex-grow: 0;
+      padding: .5em;
+      $light-orange: lighten($vt-orange, 10%);
+      @include linear-gradient(to right, $vt-orange, $light-orange);
+      color: rgba(0, 0, 0, 0.5);
+      text-align: center;
+      font-size: 1.5em;
+      width: 2.0em;
+    }
+    .card-content {
+      flex-grow: 1;
+      padding: .5em 1em .5em 1em;
+      .card-header {
+        border-bottom: 1px dotted gray;
+        h2 {
+          font-family: lato;
+          font-weight: 400;
+          font-size: 1.7em;
+        }
       }
     }
   }
 }
 
 .event-card {
-  .event-list {
-    margin-left: 1em;
-  }
   .event-details-list-item {
     margin-left: 1em;
+  }
+  .event-title {
+    .title-icon {
+      padding: 0 .5em 0 0;
+    }
   }
   .event-detail-tag {
     color: gray;
@@ -113,4 +134,16 @@ body {
       content: "About:";
     }
   }
+}
+
+.page-footer-wrapper {
+  background-color: $dark-gray;
+  color: lighten(gray, 10%);
+}
+
+.page-footer {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 1em 0;
 }
