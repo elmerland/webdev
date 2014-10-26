@@ -16,10 +16,17 @@ $footer-breakpoint: 35em;
 body {
   @include text_size();
   background-color: $dark-white;
+  > * {
+    position: relative;
+    z-index: 100;
+  }
 }
 
 // Import header styling
 @import "header";
+
+// Import hero unit styling
+@import "hero_unit";
 
 // Set footer height
 @media (min-width: $footer-breakpoint) {
@@ -27,11 +34,10 @@ body {
 
   .page-content-wrapper {
     position: relative;
-    z-index: 100;
   }
 
   .page-footer-wrapper {
-    z-index: 10;
+    z-index: 0;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -45,6 +51,7 @@ body {
 // Style page content
 .page-content-wrapper {
   background-color: $dark-white;
+  padding-top: .1em;
 }
 
 .page-content {
