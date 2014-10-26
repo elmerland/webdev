@@ -5,6 +5,13 @@ $(document).ready(function () {
   mouserOverCard()
   // Click listener for nav links
   navLinks();
+  // Resize hero unit
+  $('.hero-unit-title h1').fitText(1.3, {minFontSize: '40px',maxFontSize: '100px'});
+  // Click listener for mobile menu
+  $('.mobile_menu_toggle').click(function(e) {
+    e.preventDefault();
+    $('.page-header .page-nav').slideToggle();
+  });
 });
 
 function getLastUpdateDate() {
