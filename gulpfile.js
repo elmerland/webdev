@@ -18,7 +18,7 @@ gulp.task('compile', function(callback) {
 });
 
 gulp.task('watch', function(callback) {
-  runSequence(['watch_sass', 'watch_html', 'watch_js', 'watch_images'], callback);
+  runSequence(['watch_sass', 'watch_html', 'watch_js'], callback);
 });
 
 // Watchers --------------------------------------------------
@@ -36,11 +36,6 @@ gulp.task('watch_html', function() {
 // Will watch for changes in the js directory
 gulp.task('watch_js', function() {
   return gulp.watch('./js/**', ['move_js']);
-});
-
-// Will watch for changes in the js directory
-gulp.task('watch_images', function() {
-  return gulp.watch('./images/**', ['move_images']);
 });
 
 // Compilers --------------------------------------------------
