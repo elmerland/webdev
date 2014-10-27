@@ -26,7 +26,10 @@
       color: white;
     }
   }
-  @media (min-width: $footer-breakpoint) {
+}
+
+@media (min-width: $footer-breakpoint) {
+  .page-footer {
     display: flex;
     align-items: center;
     justify-content: space-around;
