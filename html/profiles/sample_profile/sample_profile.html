@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1">
+  <title>Sample Profile</title>
+
+  <!--Link third party styles-->
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400|Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+  <!--Link to page styles-->
+  <link type="text/css" rel="stylesheet" href="../../css/libs/normalize.css"/>
+  <link type="text/css" rel="stylesheet" href="../../css/sample_profile/styles.css"/>
+
+  <script src="../../../js/libs/jquery-2.1.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Click listener for mobile menu
+      $('.mobile_menu_toggle').click(function (e) {
+        e.preventDefault();
+        $('.page-header .page-nav').slideToggle();
+      });
+    });
+  </script>
+</head>
+
+<body>
+
+<!-- Include page header -->
+@@include('../../_header.html')
+
+<article class="container page-content">
+  <header>
+    <h1>Bond... James Bond</h1>
+    <p>Major in being awesome - Go Hokies!</p>
+    <blockquote>
+      <q>A very inspiring quote goes here</q>
+      <cite>me!</cite>
+    </blockquote>
+  </header>
+  <section>
+    <h3>Biography</h3>
+    <p>
+      This is where I write a little about myself and my story... Remember that one time! It was epic.
+    </p>
+  </section>
+  <section>
+    <h3>Look at all my skillz!</h3>
+    <ul>
+      <li>I can kill two birds with one stone</li>
+      <li>The dark is afraid of me</li>
+      <li>I once taught a german shepherd how to bark in spanish</li>
+      <li>I once started a fire using only dental floss and water</li>
+      <li>My pillow is cool on BOTH sides</li>
+    </ul>
+  </section>
+  <section>
+    <h3>These are some of my past projects</h3>
+    <dl>
+      <dt>Super awesome project 1</dt>
+      <dd>This project was super cool</dd>
+      <dt>Super awesome project 2</dt>
+      <dd>I stayed up all night doing this one!</dd>
+      <dt>Super awesome project 3</dt>
+      <dd>I learned about <code>ctrl-Z</code> in this project</dd>
+    </dl>
+  </section>
+  <section>
+    <h3>Hmmm... What else?</h3>
+    <p>I wish I could think of more things to put here. Does hacky sack count as a skill? I know, how about a cat!</p>
+    <figure>
+      <img src="http://www.wallpapersak.com/wp-content/uploads/2014/06/Cute-Cat-Pic-8.jpg" alt="Sooo cute!"/>
+    </figure>
+  </section>
+</article>
+
+</body>
+</html>

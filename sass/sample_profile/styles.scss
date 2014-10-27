@@ -1,0 +1,35 @@
+@import "../libs/bourbon/bourbon";
+@import "../libs/base/base";
+@import "layout";
+@import "text";
+
+// Set bounds for the page container
+.container {
+  @include container();
+}
+
+// Set responsive text size for page
+body {
+  @include text_size();
+}
+
+@import "header";
+
+.page-content {
+  margin-top: 1em;
+  header {
+    margin-bottom: 1em;
+  }
+}
+
+.page-content {
+  h1, h2, h3, p, blockquote, ul, dl, figure {
+    @include center_column();
+  }
+  li {
+    list-style-type: disc;
+  }
+  img {
+    max-width: 100%;
+  }
+}
