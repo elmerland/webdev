@@ -14,7 +14,7 @@ gulp.task('clean', function (callback) {
 });
 
 gulp.task('compile', function(callback) {
-  runSequence(['sass', 'move_js', 'move_images'], 'html', callback);
+  runSequence(['sass', 'move_js', 'move_images', 'move_fonts'], 'html', callback);
 });
 
 gulp.task('watch', function(callback) {
@@ -77,4 +77,10 @@ gulp.task('move_js', function() {
 gulp.task('move_images', function() {
   return gulp.src('./images/**')
     .pipe(gulp.dest('./dist/images'));
+});
+
+// Move image files into build directory
+gulp.task('move_fonts', function() {
+  return gulp.src('./fonts/**')
+    .pipe(gulp.dest('./dist/fonts'));
 });
