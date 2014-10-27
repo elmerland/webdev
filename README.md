@@ -92,6 +92,8 @@ New members should create a new "profile" page. This profile page will then be l
     - The sample profile is provided as a way to help new members get started. Please feel free to change it, hack it, or tear it up! There are no rules on what you can and cannot do (Except illegal stuff duh...) So get your creative juices flowing and create a page that will blow away recruiters.
     - We also have some challenges below if you want to do those.
 
+You can see the sample profile [here](http://www.webdev.org.vt.edu/profiles/sample_profile/sample_profile.html). When you are done with your profile, create a new issue and we will add it to the live site.
+
 ## Challenges
 
 The purpose of this project is to provide a sandbox environment to new developers that want to learn web development. One of the best ways to learn is by doing and so we encourage people to create their own profile page in this project. This profile page will have information about you. Hopefully in the process of creating this page you will learn all the basic tools and knowledge necessary for web development. Below are a few challenges that you can choose from to get you started (Items in bold are recommended for beginners).
