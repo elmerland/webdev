@@ -10,3 +10,6 @@ css
 npm-debug.log
 # Mac metadata file
 .DS_Store
+
+# Build file
+dist
