@@ -1,0 +1,65 @@
+@import "../libs/bourbon/bourbon";
+@import "../libs/base/base";
+@import "mixins";
+@import "colors";
+@import "layout";
+@import "text";
+
+$footer-breakpoint: 35em;
+
+// Set bounds for the page container
+.container {
+  @include container();
+}
+
+// Set responsive text size for page
+body {
+  @include text_size();
+  background-color: $dark-white;
+  > * {
+    position: relative;
+    z-index: 100;
+  }
+}
+
+// Import header styling
+@import "header";
+
+// Import hero unit styling
+@import "hero_unit";
+
+// Set footer height
+@media (min-width: $footer-breakpoint) {
+  @include footer_height(10em);
+
+  .page-content-wrapper {
+    position: relative;
+  }
+
+  .page-footer-wrapper {
+    z-index: 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    .page-footer {
+      height: 100%;
+    }
+  }
+}
+
+// Style page content
+.page-content-wrapper {
+  background-color: $dark-white;
+  padding-top: .1em;
+}
+
+.page-content {
+  padding-bottom: 1em;
+}
+
+// Import card styling
+@import "cards";
+
+// Import footer styling
+@import "footer";

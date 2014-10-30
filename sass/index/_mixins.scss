@@ -1,0 +1,9 @@
+
+@mixin footer_height($height) {
+  .page-content-wrapper {
+    margin-bottom: $height;
+  }
+  .page-footer-wrapper {
+    height: $height;
+  }
+}

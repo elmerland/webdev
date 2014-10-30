@@ -1,0 +1,96 @@
+
+$breakpoint: 27em;
+
+// Styling for page header
+.page-header-wrapper {
+  border-bottom: 1px solid grey;
+  background-color: white;
+}
+
+.page-header {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  .page-header-title {
+    display: flex;
+    padding: .5em .8em .5em .5em;
+    .hamburger-icon {
+      flex-grow: 0;
+      line-height: 1.5em;
+      font-size: 1.2em;
+    }
+    h1 {
+      flex-grow: 1;
+      flex-shrink: 0;
+      font-family: "Open Sans";
+      font-weight: 400;
+      font-size: 1.2em;
+      line-height: 1.5em;
+      text-align: center;
+      margin-left: -.3em;
+    }
+  }
+  .page-nav {
+    flex-grow: 1;
+    flex-shrink: 1;
+    font-family: lato;
+    font-weight: 400;
+    font-size: 1em;
+    display: none;
+    border-top: 1px solid gray;
+    ul {
+      display: flex;
+      align-items: stretch;
+      flex-direction: column;
+      height: 100%;
+      text-align: center;
+      li {
+        flex-grow: 0;
+        flex-shrink: 0;
+        margin: 0.5em;
+        a, a:link, a:visited, a:hover, a:active {
+          font-size: 1.2em;
+          line-height: 1.5em;
+          color: gray;
+        }
+        a:hover {
+          color: $dark-gray;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint) {
+  .page-header {
+    width: 100%;
+  }
+}
+
+@media (min-width: $breakpoint) {
+  .page-header {
+    flex-direction: row;
+    .page-header-title {
+      .hamburger-icon, .hamburger-icon::before {
+        display: none;
+      }
+      h1 {
+        margin-left: 0;
+      }
+    }
+    .page-nav {
+      border-top: none;
+      border-left: 1px solid grey;
+      padding: .5em 0 .5em .5em;
+      display: block;
+      ul {
+        flex-direction: row;
+        text-align: left;
+        li {
+          margin: 0;
+          padding: 0 1.5em;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import "layout";
+
+.hero-unit {
+  background-image: url("../../images/science.png");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  height: 20em;
+  display: flex;
+  align-items: center;
+  .hero-unit-title {
+    flex-grow: 1;
+    padding: 0 1em;
+    color: white;
+    text-align: center;
+    h1 {
+      text-shadow: 0 0 .4em rgba(0, 0, 0, 0.6);
+    }
+  }
+}

@@ -1,0 +1,39 @@
+// Style for the main container div
+@mixin container() {
+  & {
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 95%;
+    max-width: 1260px;
+
+    @media (min-width: 27em) {
+      width: 88%;
+    }
+
+    @media (min-width: 37.5em) {
+      width: 85%
+    }
+  }
+}
+
+// Style for all elements inside a section that should be centered
+@mixin center_column() {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+
+  @media (min-width: 25em) {
+    max-width: 30rem;
+  }
+
+  @media (min-width: 50em) {
+    width: 70%;
+    max-width: 36rem;
+  }
+
+  @media (min-width: 64.375em) {
+    width: 60%;
+    max-width: 42.5rem;
+  }
+}
