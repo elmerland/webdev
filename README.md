@@ -39,6 +39,9 @@ The following instructions assume some familiarity using a terminal. Mainly, nav
     - How to check you installed them correctly?
         - Run: `$ which npm`
         - Run: `$ which node`
+    - Make sure that you own the `.npm` file to avoid access errors
+        - Run: `$ sudo chown -R <user>:staff ~/.npm`
+        - This will change the owner of the `.npm` folder and all sub-folders to your user. Don't forget to replace `<user>` with your actual user name. **(For mac and linux only)**
 - Install gulp globally:
     - Run: `$ npm install -g gulp`
     - Check: `$ which gulp`
