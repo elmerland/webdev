@@ -1,0 +1,114 @@
+@import "../libs/bourbon/bourbon";
+@import "../libs/base/base";
+@import "../_modules/colors";
+@import "../_modules/layout";
+@import "../_modules/text";
+
+$card-breakpoint: 34em;
+$extended-desktop: 70em;
+
+// Set bounds for the page container
+.container {
+  @include container();
+}
+
+// Set responsive text size for page
+body {
+  @include text_size();
+  background-color: $dark-white;
+  > * {
+    position: relative;
+    z-index: 100;
+  }
+}
+
+// Import header styling
+@import "../_modules/header";
+
+.page-content {
+  width: 100%;
+  max-width: none;
+  margin-bottom: 3em;
+  header {
+    color: $dark-gray;
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: white;
+    box-shadow: 0 0 .5em 0em rgba(0, 0, 0, 0.2);
+  }
+}
+
+.member-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .member-card {
+    flex-grow: 1;
+    flex-shrink: 0;
+    width: 90%;
+    background-color: white;
+    border-radius: .1em;
+    border-right: 1px solid lighten(gray, 20%);
+    border-bottom: 1px solid lighten(gray, 20%);
+    box-shadow: 0.05em .05em 0 0.05em rgba(0, 0, 0, 0.1);
+    margin: .5em;
+    padding: 0;
+    transition: all 100ms;
+    a, a:link, a:visited, a:hover, a:active {
+      color: $dark-gray;
+      display: block;
+    }
+    .card-title {
+      display: block;
+      width: 100%;
+      padding: .5em .2em 1em .2em;
+      text-align: center;
+    }
+    @mixin card-image() {
+      display: block;
+      width: 100%;
+      padding: 0 .5em;
+      border-radius: 50%;
+    }
+    .card-image {
+      display: block;
+      width: 100%;
+      padding: 0 .5em;
+      border-radius: 50%;
+    }
+    .card-quote {
+      border: none;
+      padding: 0 .2em 0 .2em;
+      margin: 1em 0;
+      p {
+        margin: 0;
+      }
+    }
+  }
+  .member-card.mouse_hover {
+    box-shadow: 0 0 2em 0.2em rgba(0, 0, 0, 0.3);
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+  }
+}
+
+@media (min-width: $card-breakpoint) {
+  .member-card-container {
+    .member-card {
+      max-width: 15em;
+      flex-grow: 0;
+    }
+  }
+}
+
+@media (min-width: $extended-desktop) {
+  .member-card-container {
+    max-width: 70em;
+    margin: 0 auto;
+  }
+}
+
+@import "../_modules/footer";

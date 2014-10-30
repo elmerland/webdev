@@ -8,26 +8,17 @@
   <!--Link third party styles-->
   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400|Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="../../css/libs/sweet-alert.css" rel="stylesheet" type="text/css"/>
 
   <!--Link to page styles-->
   <link type="text/css" rel="stylesheet" href="../../css/libs/normalize.css"/>
   <link type="text/css" rel="stylesheet" href="../../css/sample_profile/styles.css"/>
 
-  <script src="../../../js/libs/jquery-2.1.1.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      // Click listener for mobile menu
-      $('.mobile_menu_toggle').click(function (e) {
-        e.preventDefault();
-        $('.page-header .page-nav').slideToggle();
-      });
-    });
-  </script>
+  <script src="../../js/libs/jquery-2.1.1.min.js"></script>
+  <script src="../../js/libs/sweet-alert.min.js"></script>
 </head>
 
 <body>
-
-<!-- Include page header -->
 @@include('../../_header.html')
 
 <article class="container page-content">

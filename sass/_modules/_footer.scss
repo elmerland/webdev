@@ -1,6 +1,9 @@
+$footer-breakpoint: 35em;
+
 .page-footer-wrapper {
   background-color: lighten($dark-gray, 10%);
   color: lighten(gray, 20%);
+  padding: 2em 0;
 }
 
 .page-footer {

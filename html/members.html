@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1">
+  <title>Web Dev</title>
+
+  <!--Link third party styles-->
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400|Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="css/libs/sweet-alert.css" rel="stylesheet" type="text/css"/>
+
+  <!--Link to page styles-->
+  <link type="text/css" rel="stylesheet" href="css/libs/normalize.css"/>
+  <link type="text/css" rel="stylesheet" href="css/members/styles.css"/>
+
+  <!--Link to third party scripts-->
+  <script src="js/libs/jquery-2.1.1.min.js"></script>
+  <script src="js/libs/jquery.fittext.js"></script>
+  <script src="js/libs/sweet-alert.min.js"></script>
+
+  <!--Link to page scripts-->
+  <script src="js/members/script.js"></script>
+</head>
+<body>
+@@include('./_header.html')
+
+<div class="page-content-wrapper">
+  <article class="container page-content">
+    <header>
+      <h1>Club Members</h1>
+    </header>
+    <!--
+    Copy the below code snippet and fill out the variables to create a new profile card:
+
+    @@include('./members/_member_card.html', {
+    "name": "",
+    "picture_link": "#",
+    "profile_link": "#",
+    "quote": "",
+    "cite": ""
+    })
+    -->
+    <div class="member-card-container">
+      @@include('./members/_member_card.html', {
+      "name": "Santa Cat",
+      "picture_link": "https://octodex.github.com/images/saint-nicktocat.jpg",
+      "profile_link": "#",
+      "quote": "Genius is one percent inspiration, ninety-nine percent perspiration.",
+      "cite": "Thoma Edison"
+      })
+      @@include('./members/_member_card.html', {
+      "name": "Miner Cat",
+      "picture_link": "https://octodex.github.com/images/minertocat.png",
+      "profile_link": "#",
+      "quote": "Genius is one percent inspiration, ninety-nine percent perspiration.",
+      "cite": "Thoma Edison"
+      })
+      @@include('./members/_member_card.html', {
+      "name": "Daft Punk Cat",
+      "picture_link": "https://octodex.github.com/images/daftpunktocat-thomas.gif",
+      "profile_link": "#",
+      "quote": "Genius is one percent inspiration, ninety-nine percent perspiration.",
+      "cite": "Thoma Edison"
+      })
+      @@include('./members/_member_card.html', {
+      "name": "Nyan Cat",
+      "picture_link": "https://octodex.github.com/images/nyantocat.gif",
+      "profile_link": "#",
+      "quote": "Genius is one percent inspiration, ninety-nine percent perspiration.",
+      "cite": "Thoma Edison"
+      })
+      @@include('./members/_member_card.html', {
+      "name": "Gangnam Cat",
+      "picture_link": "https://octodex.github.com/images/gangnamtocat.png",
+      "profile_link": "#",
+      "quote": "Genius is one percent inspiration, ninety-nine percent perspiration.",
+      "cite": "Thoma Edison"
+      })
+      @@include('./members/_member_card.html', {
+      "name": "Spider Cat",
+      "picture_link": "https://octodex.github.com/images/spidertocat.png",
+      "profile_link": "#",
+      "quote": "Genius is one percent inspiration, ninety-nine percent perspiration.",
+      "cite": "Thoma Edison"
+      })
+      @@include('./members/_member_card.html', {
+      "name": "Megaman Cat",
+      "picture_link": "https://octodex.github.com/images/megacat-2.png",
+      "profile_link": "#",
+      "quote": "Genius is one percent inspiration, ninety-nine percent perspiration.",
+      "cite": "Thoma Edison"
+      })
+      @@include('./members/_member_card.html', {
+      "name": "Storm Trooper Cat",
+      "picture_link": "https://octodex.github.com/images/stormtroopocat.png",
+      "profile_link": "#",
+      "quote": "Genius is one percent inspiration, ninety-nine percent perspiration.",
+      "cite": "Thoma Edison"
+      })
+      @@include('./members/_member_card.html', {
+      "name": "Heisenberg Cat",
+      "picture_link": "https://octodex.github.com/images/heisencat.png",
+      "profile_link": "#",
+      "quote": "Genius is one percent inspiration, ninety-nine percent perspiration.",
+      "cite": "Thoma Edison"
+      })
+    </div>
+  </article>
+  @@include('./_footer.html')
+</div>
+</body>
+</html>

@@ -4,6 +4,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var fileinclude = require('gulp-file-include');
 var del = require('del');
 var runSequence = require('run-sequence');
+var browserSync = require('browser-sync');
 
 gulp.task('default', function(callback) {
   runSequence('clean', 'compile', 'watch', callback);
@@ -17,25 +18,34 @@ gulp.task('compile', function(callback) {
   runSequence(['sass', 'move_js', 'move_images', 'move_fonts'], 'html', callback);
 });
 
-gulp.task('watch', function(callback) {
+gulp.task('watch', ['browser-sync'], function(callback) {
   runSequence(['watch_sass', 'watch_html', 'watch_js'], callback);
+});
+
+// Browser Sync --------------------------------------------------
+gulp.task('browser-sync', function() {
+  browserSync({
+    server: {
+      baseDir: "./dist/"
+    }
+  });
 });
 
 // Watchers --------------------------------------------------
 
 // Will watch for changes in the sass directory and compile
 gulp.task('watch_sass', function() {
-  return gulp.watch('./sass/**', ['sass']);
+  return gulp.watch('./sass/**', ['sass', browserSync.reload]);
 });
 
 // Will watch for changes in the html directory and compile
 gulp.task('watch_html', function() {
-  return gulp.watch('./html/**', ['html']);
+  return gulp.watch('./html/**', ['html', browserSync.reload]);
 });
 
 // Will watch for changes in the js directory
 gulp.task('watch_js', function() {
-  return gulp.watch('./js/**', ['move_js']);
+  return gulp.watch('./js/**', ['move_js', browserSync.reload]);
 });
 
 // Compilers --------------------------------------------------

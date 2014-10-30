@@ -6,10 +6,24 @@
     </header>
     <nav class="page-nav">
       <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Join</a></li>
-        <li><a href="#">Members</a></li>
+        <li><a href="/index.html">About</a></li>
+        <li><a class="inactive" href="#">Join</a></li>
+        <li><a class="inactive" href="#">Members</a></li>
       </ul>
     </nav>
   </div>
 </section>
+<script>
+  $(document).ready(function() {
+    // Click listener for mobile menu
+    $('.mobile_menu_toggle').click(function(e) {
+      e.preventDefault();
+      $('.page-header .page-nav').slideToggle();
+    });
+
+    $('.page-nav .inactive').click(function (e) {
+      e.preventDefault();
+      swal("Hello there!\nThis page is still under construction. It will be ready soon :D");
+    })
+  });
+</script>
