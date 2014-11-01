@@ -78,6 +78,11 @@ We use a project builder called **Gulp JS**. This program allows us to run a few
         - `$ gulp watch` - It will watch for any changes to files in the top level directory. If a change is detected it will recompile the changed file.
         - `$ gulp` - This command is a shortcut for `$ gulp clean compile watch`. It will delete all distribution files, compile them, and then watch for changes. **(RECOMMEMDED)**
     - I recommend you running `$ gulp`. It will do everything you need in one pass. NOTE: If you create or delete a file please re-run `$ gulp`.
+- Running
+    - Once you complete all of the above when you run `$ gulp`, a new broswer window should open. This browser window will be *automatically* reloaded everytime you change an existing file.
+    - If you notice the URL bar in your browser it will say `localhost:3000`. This indicates that gulp is actually running a very small web server. Keep in mind that all compiled files are stored in the `dist` folder and the server runs based on that folder as well. Therefore any file path will be based on the `dist` folder.
+    - The initial page corresponds to the `dist/index.html` file. To see the sample profile you can modify the URL to look like this: `localhost:3000/profiles/sample_profile/sample_profile.html` which maps to the `dist/profiles/sample_profile/sample_profile.html` file.
+    - If you want to see your profile page modify the URL so that it looks like this: `localhost:3000/profiles/<your_name>/<your_profile>.html`. Substituting the `<your_name>` and `<your_profile>` accordingly.
 
 Now you should be able to compile files including HTML, Sass and JavaScript.
 
