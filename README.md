@@ -49,7 +49,7 @@ The following instructions assume some familiarity using a terminal. Mainly, nav
     - Follow [installation instructions](http://git-scm.com/book/en/Getting-Started-Installing-Git).
     - Once installed follow [these instructions](https://help.github.com/articles/set-up-git/) to setup your GitHub credentials.
     - To avoid having to type in your password every time you push follow [these instructions](https://help.github.com/articles/caching-your-github-password-in-git/).
-    - **Very important:** Because this project is used by windows, mac and linux users you need to run the following command: [`$ git config --global core.autocrlf input`](https://help.github.com/articles/dealing-with-line-endings/). This will handle the different line endings among the different operating systems.
+    - **VERY IMPORTANT:** Because this project is used by windows, mac and linux users you need to run the following command: [`$ git config --global core.autocrlf input`](https://help.github.com/articles/dealing-with-line-endings/). This will handle the different line endings among different operating systems.
 
 ## How does this project work?
 
@@ -76,7 +76,7 @@ We use a project builder called **Gulp JS**. This program allows us to run a few
         - `$ gulp clean` - This will delete the entire `dist` directory.
         - `$ gulp compile` - This will compile all files and put them in the `dist` directory (if the directory doesn't exist, it will be created).
         - `$ gulp watch` - It will watch for any changes to files in the top level directory. If a change is detected it will recompile the changed file.
-        - `$ gulp` - This command is a shortcut for `$ gulp clean compile watch`. It will delete all distribution files, compile them, and then watch for changes.
+        - `$ gulp` - This command is a shortcut for `$ gulp clean compile watch`. It will delete all distribution files, compile them, and then watch for changes. **(RECOMMEMDED)**
     - I recommend you running `$ gulp`. It will do everything you need in one pass. NOTE: If you create or delete a file please re-run `$ gulp`.
 
 Now you should be able to compile files including HTML, Sass and JavaScript.
