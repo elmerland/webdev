@@ -29,7 +29,7 @@ body {
   width: 100%;
   max-width: none;
   margin-bottom: 3em;
-  header {
+  .page-content-title {
     color: $dark-gray;
     text-align: center;
     margin-top: 2em;
@@ -38,6 +38,10 @@ body {
     padding-bottom: 1em;
     background-color: white;
     box-shadow: 0 0 .5em 0em rgba(0, 0, 0, 0.2);
+    h1 {
+      font-family: lato;
+      font-weight: 400;
+    }
   }
 }
 
@@ -45,6 +49,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: flex-start;
   .member-card {
     flex-grow: 1;
     flex-shrink: 0;
@@ -66,12 +71,8 @@ body {
       width: 100%;
       padding: .5em .2em 1em .2em;
       text-align: center;
-    }
-    @mixin card-image() {
-      display: block;
-      width: 100%;
-      padding: 0 .5em;
-      border-radius: 50%;
+      font-family: lato;
+      font-weight: 400;
     }
     .card-image {
       display: block;
