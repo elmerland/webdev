@@ -35,7 +35,7 @@ The following instructions assume some familiarity using a terminal. Mainly, nav
 
 - Install node.js and npm:
     - [windows, mac and linux](http://nodejs.org/download/).
-    - [For mac using homebrew](http://thechangelog.com/install-node-js-with-homebrew-on-os-x/). [WTF is homebrew?](http://brew.sh/).
+    - If you have homebrew installed on your mac, they can be [installed through homebrew](http://thechangelog.com/install-node-js-with-homebrew-on-os-x/) instead. If you do not know what homebrew is you can find out [here](http://brew.sh/). This is a mac only program however.
     - How to check you installed them correctly?
         - Run: `$ which npm`
         - Run: `$ which node`
@@ -47,8 +47,9 @@ The following instructions assume some familiarity using a terminal. Mainly, nav
     - Check: `$ which gulp`
 - Install git:
     - Follow [installation instructions](http://git-scm.com/book/en/Getting-Started-Installing-Git).
-        - For mac you should use homebrew to install git.
-        - `$ brew install git`
+    - Once installed follow [these instructions](https://help.github.com/articles/set-up-git/) to setup your GitHub credentials.
+    - To avoid having to type in your password every time you push follow [these instructions](https://help.github.com/articles/caching-your-github-password-in-git/).
+    - **Very important:** Because this project is used by windows, mac and linux users you need to run the following command: [`$ git config --global core.autocrlf input`](https://help.github.com/articles/dealing-with-line-endings/). This will handle the different line endings among the different operating systems.
 
 ## How does this project work?
 
